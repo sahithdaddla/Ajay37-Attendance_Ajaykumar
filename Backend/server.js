@@ -36,7 +36,7 @@ const pool = new Pool({
 // Middleware
 app.use(cors());
 app.use(cors({
-    origin: ['http://13.51.205.49:3106', 'http://127.0.0.1:5501'],
+    origin: ['http://13.49.49.147:3106', 'http://127.0.0.1:5501'],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type']
 }));
@@ -266,9 +266,9 @@ pool.connect()
         initializeDatabase().then(() => {
            app.listen(port, '0.0.0.0', () => {
                 logger.info(`Server running on port ${port}`);
-                console.log(`Health check: http://13.51.205.49:${port}/health`);
-                console.log(`HR Dashboard: http://13.51.205.49:${port}/attendance.html`);
-                console.log(`Employee Asset Request: http://13.51.205.49:${port}/employee.html`);
+                console.log(`Health check: http://13.49.49.147:${port}/health`);
+                console.log(`HR Dashboard: http://13.49.49.147:${port}/attendance.html`);
+                console.log(`Employee Asset Request: http://13.49.49.147:${port}/employee.html`);
             });
         });
     })
